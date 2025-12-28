@@ -33,8 +33,11 @@ if initial_height <= 0:
     time_travel = round((2* vy) / earth_gravity,2)
     max_height = round((vy ** 2) / (2 * earth_gravity),2)
     final_position = round(vx * time_travel,2)
-elif initial_height != 0:
     
+elif initial_height != 0:
+    time_travel = round((vy+sqrt(vy**2 + 2*earth_gravity*initial_height))/earth_gravity,2)
+    max_height = round(initial_height + (vy**2)/(2*earth_gravity),2)
+    final_position = round(vx * time_travel,2)
 
 print ("Time Travel ", time_travel )
 print ("Maximum Height ", max_height)
