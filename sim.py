@@ -3,6 +3,10 @@
 import math
 import numpy as np
 import matplotlib.pyplot as plt
+import tkinter as tk
+from tkinter import ttk
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+
 
 initial_velocity = float(input ("Enter initial velocity (m/s): "))
 initial_height = float(input ("Enter initial height (m): "))
@@ -53,6 +57,4 @@ plt.xlabel("Distance (m)")
 plt.ylabel("Height (m)")
 plt.title("Projectile Motion")
 plt.show()
-
-
 
